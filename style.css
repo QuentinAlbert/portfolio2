@@ -1,0 +1,1186 @@
+body{
+    background: linear-gradient(45deg, #e12035, #7e50d1);
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Tammudu 2', cursive;
+    overflow-x: hidden;
+}
+
+#competence{
+    display: inline-flex;
+    padding-top: 7vw;
+}
+
+#welcome{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+#bonjour{
+    display: flex;
+    justify-content: center;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.welcome h2{
+    position: relative;
+    font-size: 3.5vw;
+    margin: 1rem;
+    font-family: 'Righteous', cursive;
+}
+
+.welcome h3{
+    font-size: 1.75vw;
+    margin: 1rem;
+    font-family: 'Righteous', cursive;
+}
+
+.bjr{
+    font-size: 7vw;
+    margin: 0;
+    font-family: 'Righteous', cursive;
+    color: #d2d2d2;
+    text-shadow: 0.3vw 0.3vw #e9d30b,
+                0.6vw 0.6vw #f8b356,
+                0.9vw 0.9vw #e24242;
+    rotate: 30px;
+}
+
+.bjr1{
+    transform: rotateY(0deg);
+    animation: rot1 3s, 3s 3s waiting, 3s 6s rot2;
+}
+
+@keyframes rot1{
+    0%{
+        transform: rotateY(0deg);
+    }
+    60%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(90deg);
+    }
+}
+@keyframes waiting{
+    0%{
+        transform: rotateY(90deg);
+    }
+    100%{
+        transform: rotateY(90deg);
+    }
+}
+@keyframes rot2{
+    0%{
+        transform: rotateY(90deg);
+    }
+    60%{
+        transform: rotateY(90deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+.welc1{
+    z-index: 100;
+    position: absolute;
+    top: 7vw;
+    left: 8.2vw;
+    color: #d2d2d2;
+    transform: rotateX(90deg);
+    animation: waiting 3s, 3s 3s rot3, 2s 6s rot4;
+}
+@keyframes rot3{
+    0%{
+        transform: rotateY(90deg);
+    }
+    60%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+@keyframes rot4{
+    0%{
+        transform: rotateY(0deg);
+    }
+    60%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(90deg);
+    }
+}
+
+/* --------- Panneau 1 ---------- */
+
+.competence{
+    position: relative;
+    width: 50vw;
+    animation: slider 20s infinite;
+    animation-delay: 5s;
+    z-index: 3;
+}
+
+@keyframes slider{
+    0%{
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    10%{
+        top: -1vw;
+        z-index: 3;
+    }
+    20%{
+        top: 1vw;
+        left: 2vw; 
+        z-index: 2;
+    }
+    50%{
+        top: 1vw;
+        left: 2vw;
+        z-index: 2;
+    }
+    60%{
+        top: 26vw;
+        left: 0;
+    }
+    61%{
+        z-index: 11;
+    }
+    70%{
+        top: 0;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.conn{
+    perspective: 500px;
+    z-index: 10;
+    padding: 0;
+}
+
+.conn2{
+    z-index: -2;
+    position: absolute;
+    top: -3%;
+    left: 1%;
+    width: 50vw;
+}
+
+.conn3{
+    z-index: -4;
+    position: absolute;
+    top: -2%;
+    left: 2%;
+    width: 50vw;
+}
+
+.conn li{
+    background-color: violet;
+    width: 600px;
+    height: 60px;
+    margin: 1rem;
+    border: 2px solid black;
+    background: linear-gradient(45deg, #b24db9, #7e50d1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center; 
+    overflow: hidden;
+    box-shadow: #e9d30b 0.3vw 0.3vw 7px;
+    transform: rotateY(-19deg) skewY(-10deg);
+    animation: breathe 1.5s infinite;
+    animation-direction: alternate;
+}
+@keyframes breathe{
+    0%{
+        box-shadow: #e9d30b 0.1vw 0.1vw 0px;
+    }
+    100%{
+        box-shadow: #e9d30b 0.3vw 0.3vw 7px;
+    }
+}
+
+.conn2 li{
+    box-shadow: #f8b356 0.3vw 0.3vw 7px;
+    animation: breathe2 1.5s infinite;
+    animation-direction: alternate;
+}
+@keyframes breathe2{
+    0%{
+        box-shadow: #f8b356 0.1vw 0.1vw 0px;
+    }
+    100%{
+        box-shadow: #f8b356 0.3vw 0.3vw 7px;
+    }
+}
+
+.conn3 li{
+    box-shadow: #e24242 0.3vw 0.3vw 7px;
+    animation: breathe3 1.5s infinite;
+    animation-direction: alternate;
+}
+@keyframes breathe3{
+    0%{
+        box-shadow: #e24242 0.1vw 0.1vw 0px;
+    }
+    100%{
+        box-shadow: #e24242 0.3vw 0.3vw 7px;
+    }
+}
+
+
+.conn .align{
+    width: 35vw;
+    display: flex;
+    align-items: center;
+}
+
+.conn li{
+    font-size: 1.5vw;
+}
+
+.comp-tle{
+    font-size: 1.7vw;
+    margin: 0;
+    animation: marquee 3s linear infinite running;
+    transform: translate(0%);
+    width: 14.5vw;
+    font-family: 'Righteous', cursive;
+}
+
+.defilement{
+    display: inline-flex;
+    align-items: center;
+}
+
+/* --------- Panneau 2 ------- */
+
+.competence2{
+    position: absolute;
+    z-index: -11;
+    width: 50vw;
+    animation: slider2 20s infinite;
+    right: -3vw;
+    top: 8vw;
+    animation-delay: 5s;
+}
+
+@keyframes slider2{
+    0%{
+        top: 8vw;
+        right: -3vw;
+        z-index: 2; 
+    }
+    10%{
+        top: 33vw;
+        right: -1vw;
+        z-index: 2; 
+    }
+    20%{
+        top: 7vw;
+        right: -1vw;
+        z-index: 11;
+    }
+    50%{
+        top: 7vw;
+        right: -1vw;
+        z-index: 11;
+    }
+
+    60%{
+        top: 6vw;
+        right: -3vw;
+    }
+    70%{
+        top: 8vw;
+    }
+    100%{
+        top: 8vw;
+    }
+}
+
+.competence2 .comp-tle{
+    width: 13vw;
+}
+
+/* -------- HTML Anim -------- */
+
+.htm{
+    margin: 0;
+    padding: 2px;
+    font-size: 1.5vw;
+}
+
+.htm-left{
+    position: relative;
+    animation: slide-left 3s infinite;
+}
+
+.left4{
+        left: -45%;
+        animation-delay: 2.5s;
+}
+
+.left1{
+    left: -45%;
+    animation-delay: 2s;
+}
+
+.left2{
+    left: -45%;
+    animation-delay: 1.5s;
+}
+
+.left3{
+    left: -45%;
+    animation-delay: 1s;
+}
+
+.htm-right{
+    position: relative;
+    animation: slide-right 3s infinite;
+}
+
+.right1{
+    right: -45%;
+    animation-delay: 2s;
+}
+
+.right2{
+    right: -45%;
+    animation-delay: 1.5s;
+}
+
+.right3{
+    right: -45%;
+    animation-delay: 1s;
+}
+.right4{
+    right: -45%;
+    animation-delay: 2.5s;
+}
+
+.htm-center{
+    position: relative;
+    top: -65%;
+    animation: slide-top 3s infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes slide-top{
+    0%{
+        top: -65%;
+    }
+    10%{
+        top: -65%;
+    }
+    15%{
+        top: 0;
+    }
+    80%{
+        top: 0;
+    }
+    85%{
+        top: -65%;
+    }
+    100%{
+        top: -65%;
+    }
+}
+
+@keyframes slide-right{
+    0%{
+        right: -45%;
+    }
+    10%{
+        right: -45%;
+    }
+    20%{
+        right: 0;
+    }
+    60%{
+        right: 0;
+    }
+    80%{
+        right: -45%;
+    }
+    100%{
+        right: -45%;
+    }
+}
+
+@keyframes slide-left{
+    0%{
+        left: -45%;
+    }
+    10%{
+        left: -45%;
+    }
+    20%{
+        left: 0;
+    }
+    60%{
+        left: 0;
+    }
+    80%{
+        left: -45%;
+    }
+    100%{
+        left: -45%;
+    }
+}
+
+/* --------- CSS Anim ------- */
+.css{
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.css-left{
+    position: relative;
+    left: -45%;
+    animation: slide-left 3s infinite;
+}
+
+.css-l5{
+    animation-delay: 1s;
+}
+.css-l4{
+    animation-delay: 1.25s;
+}
+.css-l3{
+    animation-delay: 1.5s;
+}
+.css-l2{
+    animation-delay: 1.75s;
+}
+.css-l1{
+    animation-delay: 2s;
+}
+
+.css-center{
+    position: relative;
+    top: -60%;
+    animation: slide-top 3s infinite;
+    animation-delay: 0.5s;
+}
+
+.css-right{
+    position: relative;
+    right: -45%;
+    animation: slide-right 3s infinite;
+}
+
+.css-r5{
+    animation-delay: 1s;
+}
+.css-r4{
+    animation-delay: 1.25s;
+}
+.css-r3{
+    animation-delay: 1.5s;
+}
+.css-r2{
+    animation-delay: 1.75s;
+}
+.css-r1{
+    animation-delay: 2s;
+}
+/* ------- Javascript Anim -------- */
+
+.js{        
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.js-left{
+    position: relative;
+    left: -45%;
+    animation: slide-left 3s infinite;
+}
+
+.js-l2{
+    animation-delay: 1s;
+}
+.js-l1{
+    animation-delay: 1.5s;
+}
+
+.js-center{
+    position: relative;
+    top: -60%;
+    animation: slide-top 3s infinite;
+    animation-delay: 0.5s;
+}
+
+.js-right{
+    position: relative;
+    right: -45%;
+    animation: slide-right 3s infinite;
+}
+
+.js-r2{
+    animation-delay: 1s;
+}
+.js-r1{
+    animation-delay: 1.5s;
+}
+
+/* ------- Photoshop Anim -------- */
+
+.ps{        
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.ps-left{
+    position: relative;
+    left: -45%;
+    animation: slide-left 3s infinite;
+}
+
+.ps-l2{
+    animation-delay: 1s;
+}
+.ps-l1{
+    animation-delay: 1.5s;
+}
+
+.ps-center{
+    position: relative;
+    top: -60%;
+    animation: slide-top 3s infinite;
+    animation-delay: 0.5s;
+}
+
+.ps-right{
+    position: relative;
+    right: -45%;
+    animation: slide-right 3s infinite;
+}
+
+.ps-r2{
+    animation-delay: 1s;
+}
+.ps-r1{
+    animation-delay: 1.5s;
+}
+
+/* ------- Keyframe ------ */
+
+@keyframes marquee{
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+/* ------------- Red button ---------- */
+/* Copyright (c) 2021 by Peter Hrynkow (https://codepen.io/peterhry/pen/DKcGx)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
+
+
+.the-button {
+  border-radius: 50%;
+  box-shadow: 0 0 .5em rgba(0,0,0,1), 
+    inset 0 .25em .3em rgba(255,255,255,.3), 
+    inset 0 -.25em .3em rgba(0,0,0,.5);
+  cursor: pointer;
+  font: inherit;
+  height: 100%;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.the-button:before {
+  background: linear-gradient(to bottom,  
+    rgba(255,255,255,0.14) 0%, 
+    rgba(255,255,255,0) 50%, 
+    rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  content: " ";
+  height: 80%;
+  left: 10%;
+  position: absolute;
+  top: 10%;
+  width: 80%;
+}
+
+.the-button:active {
+  box-shadow: 0 0 .5em rgba(0,0,0,1), 
+    inset 0 .1em .3em rgba(0,0,0,.5), 
+    inset 0 -.1em .3em rgba(0,0,0,.5);
+}
+
+.the-button:active:before {
+  top: 11.5%;
+}
+
+.button-frame {
+    background: #cc0000;
+    border-radius: 50%;
+    box-shadow: 0 0 8em rgba(189,246,163,.75), 
+      0 0 8em rgba(189,246,163,.75), 
+      0 0 .25em rgba(0,0,0,.9), 
+      inset 0 .25em .125em rgba(255,255,255,.3), 
+      inset 0 -.25em .125em rgba(0,0,0,.3);
+    display: block;
+    height: 6.8em;
+    margin: -3.4em auto 0;
+    padding: .55em;
+    position: relative;
+    width: 6.8em;
+    z-index: 1;
+    top: 50px;
+}
+
+.plastic {
+  background: linear-gradient(to bottom,  #b01e1e 0%,#920f0f 100%);
+}
+
+.button{
+    top: 65%;
+    right: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    justify-content: center;
+}
+
+.button-tle{
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    color: #920f0f;
+}
+
+
+#stop{
+    position: absolute;
+    font-size: 5rem;
+    visibility: hidden;
+    margin: 0;
+}
+
+#button{
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+/* ------------- Formation -------- */
+
+.formation{
+    width: 50vw;
+    height: 22vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formation h1{
+    font-size: 2.25vw;
+    margin: 1rem;
+    font-family: 'Righteous', cursive;
+}
+
+.formation p{
+    font-size: 1.5vw;
+    margin: 1rem;
+    font-family: 'Righteous', cursive;
+}
+
+.forma{
+    color: #d2d2d2;
+    text-shadow: 0.2vw 0.2vw #e9d30b,
+                0.4vw 0.4vw #f8b356,
+                0.6vw 0.6vw #e24242  ;
+}
+
+/*  ------------- Creation ------------- */
+.creation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+.create{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+}
+
+.creation-tle{
+    font-size: 1.25vw;
+    margin: 1rem;
+    font-family: 'Righteous', cursive;
+}
+
+.creat{
+    color: #d2d2d2;
+    text-shadow: 0.2vw 0.2vw #e9d30b,
+                0.4vw 0.4vw #f8b356,
+                0.6vw 0.6vw #e24242  ;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: transform 1s ease-in-out,
+                opacity 1s ease-in-out;
+}
+.creat.active{
+    transform: translateY(0%);
+    opacity: 100;
+}
+
+.creat1{
+    position: absolute;
+    top: 100.60%;
+    color: #e9d30b;
+    z-index: -2;
+    left: 44.5%;
+}
+.creat2{
+    position: absolute;
+    top: 100.90%;
+    color: #f8b356;
+    z-index: -3;
+    left: 44.75%;
+}
+.creat3{
+    position: absolute;
+    top: 101.20%;
+    color: #e24242;
+    z-index: -4;
+    left: 45%;
+}
+
+.bla{
+    display: none;
+}
+
+.create img{
+    width: 20vw;
+    border-radius: 25px;
+    border: #d2d2d2 2px solid;
+}
+
+.create li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25vw;
+}
+
+.l2{
+    display: none;
+}
+
+.l3{
+    display: none;
+}
+
+.hid{
+    visibility: hidden;
+}
+
+/* -------------- A propos ----------- */
+
+#apropos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.propos-tle{
+    font-size: 1.25vw;
+    margin: 1rem;
+    font-family: 'Righteous', cursive;
+}
+
+.prop{
+    color: #d2d2d2;
+    text-shadow: 0.2vw 0.2vw #e9d30b,
+                0.4vw 0.4vw #f8b356,
+                0.6vw 0.6vw #e24242  ;
+                transform: translateY(200%);
+                opacity: 0;
+                transition: transform 1s ease-in-out,
+                            opacity 1s ease-in-out;
+}
+.prop.active{
+    transform: translateY(0%);
+    opacity: 100;
+}
+
+.apropos{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    font-size: 1.25vw;
+}
+
+/* -------------- Experience ---------- */
+
+#experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.exp{
+        font-size: 1.25vw;
+        margin: 1rem;
+        font-family: 'Righteous', cursive; 
+}
+
+.expe{
+    color: #d2d2d2;
+    text-shadow: 0.2vw 0.2vw #e9d30b,
+                0.4vw 0.4vw #f8b356,
+                0.6vw 0.6vw #e24242  ;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: transform 1s ease-in-out,
+            opacity 1s ease-in-out;
+}
+.expe.active{
+transform: translateY(0%);
+opacity: 100;
+}
+
+
+.experience{
+    display: flex;
+}
+
+.experience h5{
+    font-family: 'Righteous', cursive; 
+    font-size: 1vw;
+    margin: 0;
+}
+
+.experience p{
+    font-size: 1vw;
+    margin-bottom: 1rem;
+}
+
+.exp-left{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.exp-right{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* ------------ Footer ---------- */
+.footer{
+    display: inline-flex;
+    align-items: center;
+    width: 100vw;
+    padding: 0.5rem;
+    margin-top: 6rem ;
+    border-top: 1px solid black;
+    box-shadow: #e9d30b 0px -3px 25px;
+    animation: neon 5s infinite;
+}
+
+@keyframes neon{
+    0%{
+        box-shadow: #e9d30b 0px -3px 25px;  
+    }
+    33%{
+        box-shadow: #f8b356 0px -3px 25px;
+    }
+    66%{
+        box-shadow: #e24242 0px -3px 25px;
+    }
+}
+
+.footer p{
+    margin: 0;
+}
+
+.mail{
+    display: flex;
+    width: 33%;
+    align-items: center;
+    flex-direction: column;
+}
+.RS{
+    display: flex;
+    width: 33%;
+    align-items: center;
+    flex-direction: column;
+}
+.tel{
+    display: flex;
+    width: 33%;
+    align-items: center;
+    flex-direction: column;
+}
+.RS img{
+    width: 3vw;
+}
+
+/* ---------- Media ----------- */
+
+
+.competence{
+    position: relative;
+    width: 50vw;
+    animation: slider 20s infinite;
+    animation-delay: 5s;
+    z-index: 3;
+}
+
+
+@media (max-width: 1440px){
+    @keyframes slider{
+        0%{
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        10%{
+            top: -2vw;
+            z-index: 3;
+        }
+        20%{
+            top: 1vw;
+            left: 4vw; 
+            z-index: 2;
+        }
+        50%{
+            top: 1vw;
+            left: 4vw;
+            z-index: 2;
+        }
+        60%{
+            top: 26vw;
+            left: 17vw;
+        }
+        61%{
+            z-index: 11;
+        }
+        70%{
+            top: 0;
+            left: 0;
+        }
+        100%{
+            top: 0;
+        }
+    }
+    @keyframes slider2{
+        0%{
+            top: 8vw;
+            right: -3vw;
+            z-index: 2; 
+        }
+        10%{
+            top: 34vw;
+            right: -17vw;
+            z-index: 2; 
+        }
+        20%{
+            top: 7vw;
+            right: -1vw;
+            z-index: 11;
+        }
+        50%{
+            top: 7vw;
+            right: -1vw;
+            z-index: 11;
+        }
+    
+        60%{
+            top: 5vw;
+            right: -3vw;
+        }
+        70%{
+            top: 8vw;
+        }
+        100%{
+            top: 8vw;
+        }
+    }
+}
+
+@media (max-width: 961px){
+    #competence {
+        display: flex;
+        padding-top: 7vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    #welcome{
+        width: 100vw;
+    }
+    #button {
+        display: flex;
+        justify-content: center;
+    }
+    .bjr{
+        font-size: 11vw;
+    }
+    .welcome h2 {
+        font-size: 5vw;
+    }
+    .welcome h3 {
+        font-size: 4vw;
+    }
+    .competence{
+        width: 100vw;
+    }
+    .competence2{
+        position: relative;
+        right: 0vw;
+        top: 0vw;
+        width: 100vw;
+    }
+    .conn{
+        perspective: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .conn2 {
+        top: 1%;
+        left: 26%;
+    }
+    .conn3 {
+        top: 2%;
+        left: 27%;
+    }
+    .conn .align{
+        transform: rotateY(0deg) skewY(0deg);
+    }
+    .conn .align {
+        width: 75vw;
+    }
+    .comp-tle {
+        font-size: 4.7vw;
+        width: 40.5vw;
+    }
+    .competence2 .comp-tle {
+        width: 36vw;
+    }
+    .htm {
+        font-size: 4.5vw;
+    }
+    .css{
+        font-size: 4.5vw;
+    }
+    .js{
+        font-size: 4.5vw;
+    }
+    .ps{
+        font-size: 4.5vw;
+    }
+    .formation{
+        width: 90vw;
+        margin: 5vw;
+    }
+    .formation h1 {
+        font-size: 6.5vw;
+    }
+    .formation p{
+        font-size: 4vw;
+    }
+    .creation-tle {
+        font-size: 3.25vw;
+    }
+    .create img {
+        width: 70vw;
+    }
+    .create li {
+        font-size: 4vw;
+    }
+    .create{
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+    .hid{
+        position: absolute;
+    }
+    .propos-tle {
+        font-size: 3.25vw;
+    }
+    .apropos {
+        width: 75vw;
+        font-size: 3.75vw;
+    }
+    .experience{
+        flex-direction: column;
+    }
+    .experience h5 {
+        font-size: 3vw;
+    }
+
+    .exp-left, .exp-right{
+        width: 75vw;
+    }
+    .experience p {
+        font-size: 3vw;
+    }
+    .exp{
+        font-size: 3.25vw;
+    }
+    .button{
+        display: none;
+    }
+    .competence{
+        animation: none;
+    }
+    .competence2{
+        animation: none;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding:0;
+        margin-top: 3rem;
+    }
+    .RS img {
+        width: 8vw;
+    }
+}
+
+@media (max-width: 425px){
+    .footer{
+        margin-top: 1rem;
+    }
+    .RS img {
+        width: 13vw;
+    }
+}
